@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <!-- <v-app-bar flat app> <NavBar /></v-app-bar> -->
+    <!-- <v-main> -->
+      <router-view />
+    <!-- </v-main> -->
+    <!-- <v-footer>
+      <Footer />
+    </v-footer> -->
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  metaInfo: {
+    title: "Jonathan Lin",
+    // link: [
+    //   { rel: "favicon", href: "../src/assets/images/slide-logos/favicon.ico" },
+    // ],
+  },
+  name: "App",
+  components: {},
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+:root {
+  --slide_blue: #3c69be;
+  --slide_light: #ddf0fd;
+  --slide_light2: #90caf9;
+  --slide_white: #fdfdfd;
 }
+
+// * {
+//   font-family: Optimist;
+// }
 </style>
