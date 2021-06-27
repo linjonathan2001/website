@@ -30,7 +30,7 @@ export default {
     Dimensions() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return "275";
+          return "800";
         case "sm":
           return "1000";
 

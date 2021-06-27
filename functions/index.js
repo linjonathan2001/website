@@ -5,10 +5,7 @@ const cors = require("cors")({ origin: true });
 exports.sendSlackMessage = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
     axios
-      .post(
-        "https://hooks.slack.com/services/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",
-        req.query
-      )
+      .post(functions.config().slack.url, req.query)
       .then(function(response) {
         // console.log(response);
         res.status(200).send({ text: "Complete" });
