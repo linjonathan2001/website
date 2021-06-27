@@ -4,21 +4,21 @@
       <v-row class="text-sm flex-column justify-center align-center pt-8"
         >Message Me</v-row
       >
-      <v-col cols="12">
-        <v-text-field v-model="name" label="Name" name="name"></v-text-field>
-      </v-col>
-      <v-col cols="12">
-        <v-text-field
-          v-model="message"
-          label="Say Hi"
-          name="message"
-        ></v-text-field>
-      </v-col>
-      <v-container>
-        <v-row class="align-left">
-          <v-btn class="text-capitalize" @click="submit">Send</v-btn>
+      <v-col align="start" class="px-0">
+        <v-row align="center" no-gutters>
+          <v-text-field v-model="name" label="Name" name="name"></v-text-field>
         </v-row>
-      </v-container>
+        <v-row align="center" no-gutters>
+          <v-text-field
+            v-model="message"
+            label="Say Hi"
+            name="message"
+          ></v-text-field>
+          <v-btn depressed id="send" class="text-capitalize" @click="submit"
+            >Send</v-btn
+          >
+        </v-row>
+      </v-col>
     </v-container>
   </v-form>
 </template>
@@ -55,4 +55,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#send {
+  margin-bottom: 8px;
+}
+</style>
