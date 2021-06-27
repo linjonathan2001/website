@@ -1,19 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar flat app> <Header /></v-app-bar>
     <v-main>
       <router-view />
     </v-main>
-    <v-footer>
-      <Footer />
-    </v-footer>
   </v-app>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-
 export default {
   metaInfo: {
     title: "Jonathan Lin",
@@ -22,7 +15,7 @@ export default {
     // ],
   },
   name: "App",
-  components: { Header, Footer },
+  components: {},
 };
 </script>
 
@@ -34,14 +27,29 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #141414;
-  background-color: #fdfdfd;
+  background-color: var(--white);
 }
 
 :root {
   --slide_blue: #3c69be;
-  --slide_light: #ddf0fd;
-  --slide_light2: #90caf9;
-  --slide_white: #fdfdfd;
+  --white: #fdfdfd;
+  --black: #141414;
+}
+
+.white-text {
+  color: var(--white);
+}
+
+.black-text {
+  color: var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
 }
 
 .text-xs {
