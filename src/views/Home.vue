@@ -29,8 +29,10 @@
   </div>
 </template>
 
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-functions.js"></script>
 <script>
-import axios from "axios";
+import { functions } from "../firebase.js";
 
 export default {
   name: "Home",
@@ -45,11 +47,8 @@ export default {
       const headers = {
         "content-type": "application/json",
       };
-      axios.post(
-        "http://hooks.slack.com/services/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",
-        payload,
-        { headers }
-      );
+      var sendSlackMessage = functions.httpsCallable("sendSlackMessage");
+      sendSlackMessage(payload);
     },
   },
 };
