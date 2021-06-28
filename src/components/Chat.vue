@@ -13,8 +13,9 @@
             v-model="message"
             label="Say Hi"
             name="message"
+            @keyup.enter="send"
           ></v-text-field>
-          <v-btn depressed id="send" class="text-capitalize" @click="submit"
+          <v-btn depressed id="send" class="text-capitalize" @click="send"
             >Send</v-btn
           >
         </v-row>
@@ -32,7 +33,7 @@ export default {
     message: "",
   }),
   methods: {
-    submit() {
+    send() {
       if (this.message != "") {
         const payload = {
           params: { text: this.name + " says: " + this.message },
