@@ -43,7 +43,7 @@ export default {
   position: absolute;
   top: 0;
   left: 24px;
-  display: inline-block;
+  max-width: 300px;
 }
 #name {
   margin: 36px 8px 16px 8px;
